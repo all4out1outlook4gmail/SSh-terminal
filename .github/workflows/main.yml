@@ -1,0 +1,17 @@
+name: SSH Remote RDP
+run-name: SSH Remote RDP
+env:
+  main_project_module: workspace
+  
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+        
+    timeout-minutes: 399 # Increase the timeout to 30 minutes
+    
+    steps:
+    - name: Start SSH via tmate
+      uses: rdp-studio/ssh2actions@main
